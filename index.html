@@ -4,14 +4,43 @@
   <title>Xtrimzz | Home</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+ 
+<!--<style>
+  body {
+      position: relative; 
+  }
+  #section1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
+  #section2 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
+  #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
+  #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
+  #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
+  </style>-->
 </head>
 <body>
-
-<nav class="navbar navbar-inverse">
+   <div>
+      
+       <div class="navContain">
+           <div  id="btnNav" style='position: fixed; z-index: 99999'>
+               <button id="open" class="openbtn" onclick="openNav('PC')" style="display:inline"><i class="glyphicon glyphicon-chevron-right"></i></button>
+               <button id="close" class="closebtn" onclick="closeNav('PC')" style="display:  none" > <i><strong>&times;</strong></i> </button>
+            </div>
+           <div id="mySidenav" class="sidenav">
+              
+        
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+       </div>
+        
+    </div>
+    <div id="main">
+        <nav class="navbar navbar-inverse" data-spy="affix" data-offset="20" style="width:100%; z-index: 100">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -19,37 +48,102 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="index.html">
+      	<img src="img/logo.png" alt="xtrimzz">
+      </a>
     </div>
+      <div class="navbar-divider"></div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Page 1-1</a></li>
-            <li><a href="#">Page 1-2</a></li>
-            <li><a href="#">Page 1-3</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
-      </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li class="active"><a href="#">Home</a></li>
+        
+        <li><a href="#">Game doc</a></li>
+        <li><a href="#">Anim doc</a></li>
+        <li class="nav-divider"></li>
+        <li><a href="#" class="dropdown" data-toggle="dropdown">Other docs<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="">Web related</a></li>
+                <li><a href="">Git hub</a></li>
+                <li><a href="">Comics</a></li>
+            </ul>
+        </li>
+        
       </ul>
     </div>
   </div>
 </nav>
-  
+   
+<div class="container-fluid">
+    <div class="jumbotron">
+        <h1>Bootstrap Affix Example</h1>
+  <h3>Fixed (sticky) vertical sidenav on scroll</h3>
+  <p>Scroll this page to see how the left navigation menu behaves with data-spy="affix".</p>
+  <p><strong>The left menu sticks to the page when you have scrolled a specified amount of pixels.</strong></p>
+
+    </div>
+</div>
+        <nav id="myNav" class="navbar navbar-default navbar-right" data-spy="affix" data-offset-top="50" style='margin-top:50px; right: 10px; top:50px; z-index: 1000'>
+        <div>
+            <ul id='doclist' class="nav navbar-nav">              
+<!--               data-spy="affix" data-offset-top="200" style="top: 50px; right: 100px"-->
+ 
+                <li ><a href="#s1">Section 1</a></li>
+                <li><a href="#s2">Section 2</a></li>
+                <li><a href="#s3">Section 3</a></li>
+        </ul>
+        </div>
+    </nav>
+ 
+    
+
 <div class="container">
+  <div class="row">
+      <main class="col-sm-9">
+   
+                 
+          <section id="s1" style="min-height: 500px; background: #007788">
+        
   <h3>Collapsible Navbar</h3>
   <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
   <p>Only when the button is clicked, the navigation bar will be displayed.</p>
-</div>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    </section>
     
+    <section id="s2" style="min-height: 500px; background: #00ff90">
+        
+  <h3>Collapsible Navbar</h3>
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+
+    </section>
+    
+    <section id="s3" style="min-height: 500px; background: #00ff90">
+        
+  <h3>Collapsible Navbar</h3>
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+<h3>Collapsible Navbar</h3>
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+  <h3>Collapsible Navbar</h3>
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+    </section>
+      </main>
+      <div class="col-sm-3">
+      
+       
+      </div>
+      
+      
+  </div>
+</div>
+    <footer class="footer">
+        <p class="text-center">xtrimzz &copy;2016</p>
+    </footer>
+    </div>
+    <script src="js/xtrimain.js"></script>
+
 </body>
+
 </html>

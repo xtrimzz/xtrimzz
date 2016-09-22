@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home |Animation | Xtrimzz</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" type="image/png" href="img/logo.png" />
+      
+    </head>
+    <body>
+        <!-- Section for sidenav -->
+            <nav class="sidenav" >
+        
+            <div class="navContain">
+                <div  id="btnNav">
+                    <button id="open" class="openbtn" onclick="openNav('PC')" ><i class="glyphicon glyphicon-chevron-right"></i></button>
+                    <button id="close" class="closebtn" onclick="closeNav('PC')"> <i class="glyphicon glyphicon-chevron-left"></i> </button>
+                </div>
+                <!-- script will populate #mySidenav -->
+                <div id="mySidenav" class="sidenav"> </div>
+            </div>  <!-- End navContain -->        
+        </nav>
+        <!-- End section sidenav -->
+        
+        <!-- Start main section -->
+        <section id="main">
+            <div id="top"></div> <!-- JUMP TO TOP -->
+            
+            <nav id="mainNav" class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>                        
+                        </button>
+                        <a class="navbar-brand" href="../index.html">
+                            <img src="img/logo.png" alt="xtrimzz">
+                        </a>
+                    </div>
+        
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li class="active"><a href="../index.html">Home</a></li>
+            
+                            <li><a href="../xtr-game/index.html">Game doc</a></li>
+                            <li><a href="#">Anim doc</a></li>
+            
+                            <li><a href="#" class="dropdown" data-toggle="dropdown">Other docs<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../xtr-web/index.html">Web related</a></li>
+                                    <li><a href="#">Git hub</a></li>
+                                    <li><a href="#">Comics</a></li>
+                                </ul>
+                            </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--
+               j + Tab - for Jumbotron 
+            .................INTRO SECTION GOES HERE! INTRO SECTION GOES HERE!! INTRO SECTION GOES HERE!!
+            ................ -->
+            
+            
+            <nav id="affixScrollNav" class="navbar navbar-default navbar-right" data-spy="affix" data-offset-top="200" >
+                <!-- Script will populate the div#doclist -->
+                <div class="container">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#doclist">
+                        <span>Content Table </span>
+                        <span class="caret"></span>                
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id='doclist'></div>
+            </nav>
+        
+        
+            <!-- start CONTENT -->
+            <div class="container">
+                <div class="row">
+                    <!-- start main -->
+                    <main class="col-sm-10">
+                        
+                        <!-- ............. a + Tab - for Article
+                        ...................s + Tab - for Section Code
+                        ..................CONTENT GOES HERE PLEASE! CONTENT GOES HERE PLEASE!! ........ -->
+                    </main>
+                    <!-- End main -->
+                  
+                    <div class="col-sm-2"></div>
+                </div>
+              
+            </div>
+            <!-- End CONTENT -->
+            <div id="bottom"></div> <!-- JUMP TO BOTTOM -->
+        </section>
+        <!-- End main section -->
+         
+         
+        <!-- Start footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>xtrimzz &copy; 2016</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End footer -->
+        
+        <script src="js/animtopiclist.js" type="text/javascript"></script>
+        <script src="js/xtrimain.js"></script>
+        <script type="text/javascript"> 
+        
+        </script>
+        
+    </body>
+    
+</html>

@@ -1,17 +1,18 @@
- 
-        // -------------(1. )  Side Navigation Content Handling---------
+ // -------------(1. )  Side Navigation Content Handling---------
         var mySidenav = document.getElementById("mySidenav");// get id mySidenav
         var topicList = new Object();           //create a list/dict containing topics
         var topicConcat = "";                   //create variable to contain the list
+        var split , htmlConcat = "";  // contact to get HTML
             //Populating the list
-            topicList.art2d = [ 
-                                "2D ART FUNDAMENTALS "
-                               ];
-//            topicList.js =[
-//                                "TOPIC "
-//                                
-//                           ];
-                           
+            topicList.gen = [ 
+                                "INTRODUCTION",
+                                "drawing drapery"
+                            ];
+           topicList.maya =[
+                                "ADVANCE 3D",
+                                
+                           ];
+                          
          //build up the navigation contain  
          for(var ppt in topicList){
              //Place an topic header
@@ -34,5 +35,5 @@
          //put the built content in mySidenav
         mySidenav.innerHTML = topicConcat; 
         
-        
-        
+
+

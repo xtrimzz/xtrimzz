@@ -4,13 +4,18 @@
         var topicList = new Object();           //create a list/dict containing topics
         var topicConcat = "";                   //create variable to contain the list
             //Populating the list
-            topicList.art2d = [ 
-                                "2D ART FUNDAMENTALS "
-                               ];
-//            topicList.js =[
-//                                "TOPIC "
-//                                
-//                           ];
+            topicList.gen = [ 
+                                "FUNDAMENTALS ",
+                                "setups",
+                                "variables",
+                                "Arrays",
+                                "Functions"
+                            ];
+            topicList.js =[
+                                "JAVASCRIPT TOPICS",
+                                "Js Fundamental",
+                                "Introduction topics"
+                           ];
                            
          //build up the navigation contain  
          for(var ppt in topicList){
@@ -33,6 +38,4 @@
          
          //put the built content in mySidenav
         mySidenav.innerHTML = topicConcat; 
-        
-        
         

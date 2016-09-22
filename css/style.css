@@ -1,8 +1,3 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : Sep 11, 2016, 6:18:45 AM
     Author     : XtriMzZ <aoadegbite@gmail.com>
@@ -17,6 +12,7 @@ color usage:
 
 */
 
+
 body
 {
     position: relative;
@@ -24,69 +20,135 @@ body
     
 }
 
-#doclist li a, .navbar, navbar-nav
+/* ==  Navigation style  == */
+#doclist.navbar,#doclist.nav,#doclist.navbar-nav,#doclist.navbar-collapse 
 {
-    display: inline-block;
-    padding: 2px;
-    width: 110px;
+    margin-top: 20px;
+    padding: 0;
+    width: 200px;
     border-radius:0;
+    position: absolute;
+    right: 0;
 }
+
+#doclist{
+    width: 100%;
+    overflow-x: hidden;
+    
+}
+#doclist li{
+    display: inline-block;
+    width: 100%;
+}
+#doclist li a{padding: 0px;}
+#doclist li a:hover{color: #CCFFE5}
+#doclist .active>a, #doclist .active>a:hover {
+    background-color: rgba(0,0,0,0);
+    border-left: 5px #CCFFE5 solid;
+    padding-left: 5px;
+}
+
+/* @Override bootstrap nav style*/
 .navbar-default
 {
     background: transparent;
     border-color: transparent; 
 }
+.navbar{
+    /* Override spacing for .navbar*/
+    min-height: 0;
+    margin-bottom: 0;
+}
 
 .navbar-default .navbar-nav>li>a{color: #00ff80; font-size: 12px;}
-.navbar-default .navbar-nav>li>a:hover {color: #ccffe5}
+
 
 .navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:focus,
-.navbar-default .navbar-nav>.active>a:hover
-{
+.navbar-default .navbar-nav>.active>a:hover{
+    border-left: 2px #CCFFE5 solid;
+    background-color: rgba(0,0,0,0);
     
+    color: #00ff80;
+}
+.navbar-default .navbar-toggle{
     background: #c8c8c8;
+}
+
+#mainNav .dropdown-menu{
+    background: #222;
+}
+#mainNav .dropdown-menu li a{
     color: white;
 }
 
+#myNavbar .navbar-inverse,
+#myNavbar .navbar-nav>li>a,
+#myNavbar ul
+#myNavbar .divider{
+    color: white;
+    background: #222222;
+  
+}
+
+.sub li a {
+   margin-left: 30px;
+}
+.sub li a:hover{
+    color:  #008080;
+}
+
+.toggle-btn{
+    position: fixed; right: 0;
+   
+}
+/* == Main Styles ==*/
+#main{
+  margin-left: 0;  
+}
+/* == MainNav Styles == */
+#mainNav{
+    width:100%;
+    height: 55px;
+    z-index: 100;
+    transition: 0.3s;
+}
+#affixScrollNav{
+                margin-top:30px;
+                right: 10px; 
+                top:30px;
+                z-index: 1000; }
+
 .navbar-brand  img{ width: 50px; height:50px}
 
-.panel
-{
-    background: white;
+/* == The side navigation menu == */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0px width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x:hidden; /* hide the text */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
-.panel-heading, .panel-body, .panel-footer
-{
-    color: #323232;
-}
-
-/* The side navigation menu */
-        .sidenav {
-            height: 100%; /* 100% Full-height */
-            width: 0; /* 0 width - change this with JavaScript */
-            position: fixed; /* Stay in place */
-            z-index: 1000; /* Stay on top */
-            top: 0;
-            left: 0;
-            background-color: #111; /* Black*/
-            overflow-x: hidden; /* Disable horizontal scroll */
-            padding-top: 60px; /* Place content 60px from the top */
-            transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-        }
 
         /* The navigation menu links */
-        .sidenav a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
-            transition: 0.3s
-        }
+.sidenav a {
+    padding: 8px 8px 8px 14px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #eee;
+    display: block;
+    transition: 0.3s
+}
 
         /* When you mouse over the navigation links, change their color */
         .sidenav a:hover, .offcanvas a:focus{
-            color: #f1f1f1;
+            color: #CCFFE5;
         }
 
 /* Position and style the close button (top right corner) */
@@ -94,19 +156,66 @@ body
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 36px !important;
+    font-size: 36px;
 /*    margin-left: 50px;*/
     margin-top: 200px;
 }
+/* style for chevron open/close btn*/
+#btnNav{position: fixed;
+        z-index: 10;
+        /*margin-left:200px;*/
+        } 
+        
+#open{display: none}
+#close{display: inline}
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main, #btnNav {
     transition: margin-left .5s;
-    padding: 20px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
+@media screen and (max-width: 1200px) {
     .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .sidenav a {font-size: 12px;}
+    #doclist {background: rgba(0, 128, 128,0.7);}
+    #doclist li a{  color: white; padding:0 0 0 15px}
+    
+}
+
+/* ==  Stying for the document layout  ==*/
+#main article.panel
+{   background: #eee;
+    border-radius: 0;
+    padding-top:20px;
+    margin-top: 10px;
+}
+#main article.panel h3{
+    margin-top: 20px;
+    color:#323232;
+}
+#main .jumbotron{
+    border-radius: 0;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#main .jumbotron h1{ 
+    font-size: 35px;
+    color: #008080;
+    border-bottom: 1px #008080 dotted;
+}
+
+.footer{
+    background: #222;
+    color: white;
+}
+
+pre{
+    padding: 5px;
+    margin: 5px;
+    color:#111;
+    height: 250px;
+    max-width: 500px; 
+    background: #fff;
+    overflow: auto;
 }

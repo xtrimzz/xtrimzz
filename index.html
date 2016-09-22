@@ -1,46 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Xtrimzz | Home</title>
+  <title>Home | Xtrimzz</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <script src="js/jquery.min.js" type="text/javascript"></script>
   <script src="js/bootstrap.min.js" type="text/javascript"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/logo.png" />
  
-<!--<style>
-  body {
-      position: relative; 
-  }
-  #section1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
-  #section2 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
-  #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
-  #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
-  #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
-  </style>-->
 </head>
 <body>
-   <div>
+    <!-- Section for sidenav -->
+    <nav class="sidenav" >
       
        <div class="navContain">
-           <div  id="btnNav" style='position: fixed; z-index: 99999'>
-               <button id="open" class="openbtn" onclick="openNav('PC')" style="display:inline"><i class="glyphicon glyphicon-chevron-right"></i></button>
-               <button id="close" class="closebtn" onclick="closeNav('PC')" style="display:  none" > <i><strong>&times;</strong></i> </button>
+           <div  id="btnNav">
+               <button id="open" class="openbtn" onclick="openNav('PC')" ><i class="glyphicon glyphicon-chevron-right"></i></button>
+               <button id="close" class="closebtn" onclick="closeNav('PC')"> <i class="glyphicon glyphicon-chevron-left"></i> </button>
             </div>
-           <div id="mySidenav" class="sidenav">
-              
+           <!-- script will populate #mySidenav -->
+           <div id="mySidenav" class="sidenav"> </div>
+       </div>  <!-- End navContain -->        
+    </nav>
+    <!-- End section sidenav -->
+    
+    <!-- Start main section -->
+    <section id="main">
         
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
-      </div>
-       </div>
-        
-    </div>
-    <div id="main">
-        <nav class="navbar navbar-inverse" data-spy="affix" data-offset="20" style="width:100%; z-index: 100">
+        <nav id="mainNav" class="navbar navbar-inverse" data-spy="affix" data-offset-top="900">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -52,19 +41,19 @@
       	<img src="img/logo.png" alt="xtrimzz">
       </a>
     </div>
-      <div class="navbar-divider"></div>
+      
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-left">
         <li class="active"><a href="#">Home</a></li>
         
         <li><a href="#">Game doc</a></li>
         <li><a href="#">Anim doc</a></li>
-        <li class="nav-divider"></li>
+        
         <li><a href="#" class="dropdown" data-toggle="dropdown">Other docs<span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li><a href="">Web related</a></li>
-                <li><a href="">Git hub</a></li>
-                <li><a href="">Comics</a></li>
+                <li><a href="#">Web related</a></li>
+                <li><a href="#">Git hub</a></li>
+                <li><a href="#">Comics</a></li>
             </ul>
         </li>
         
@@ -74,63 +63,136 @@
 </nav>
    
 <div class="container-fluid">
-    <div class="jumbotron">
-        <h1>Bootstrap Affix Example</h1>
-  <h3>Fixed (sticky) vertical sidenav on scroll</h3>
-  <p>Scroll this page to see how the left navigation menu behaves with data-spy="affix".</p>
-  <p><strong>The left menu sticks to the page when you have scrolled a specified amount of pixels.</strong></p>
-
+    <div class="jumbotron text-center" >
+        <h1>GETTING STARTED WITH HTML5 AND CSS3 </h1>
+        
+  <h2>Brief history</h2>
+  <p>
+    At this time, the Internet was already in place, 
+    with several hundred thousand computers connected to it, 
+    so Tim Berners-Lee (a CERN fellow) devised a method
+    of navigating between them using a hyperlinking framework, which came to be known as Hypertext Transfer Protocol, or HTTP. He also created a markup language called Hypertext Markup Language, or HTML. To bring these together, he wrote the first web browser and web server, tools that we now take for granted  
+  </p>
+  
     </div>
 </div>
-        <nav id="myNav" class="navbar navbar-default navbar-right" data-spy="affix" data-offset-top="50" style='margin-top:50px; right: 10px; top:50px; z-index: 1000'>
-        <div>
-            <ul id='doclist' class="nav navbar-nav">              
-<!--               data-spy="affix" data-offset-top="200" style="top: 50px; right: 100px"-->
- 
-                <li ><a href="#s1">Section 1</a></li>
-                <li><a href="#s2">Section 2</a></li>
-                <li><a href="#s3">Section 3</a></li>
-        </ul>
-        </div>
+        <nav id="affixScrollNav" class="navbar navbar-default navbar-right" data-spy="affix" data-offset-top="500" >
+            <!-- Script will populate the div#doclist -->
+            <div class="container">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#doclist">
+                  <span>Content Table </span>
+                <span class="caret"></span>                
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id='doclist'></div>
     </nav>
  
     
 
 <div class="container">
   <div class="row">
-      <main class="col-sm-9">
+      <main class="col-sm-10">
    
                  
-          <section id="s1" style="min-height: 500px; background: #007788">
+          <article class="panel">
+        
+  <h3>How the web works</h3>
+  <p>
+      Understanding how the web works is like how a car works. You don’t need to understand how car works before you can drive a car but if you do it makes to avoid error and give way for trouble shooting.
+      The World Wide Web consists of a large group of computers, known as servers , they exist solely to provide information when it is requested. The information is requested by a piece of software called web browsers, th 
+  </p>
+
+  <h4>Collapsible not here</h4>
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+
+  <h4> Navbar</h4>
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+
+    </article>
+    
+          <article class="panel">
         
   <h3>Collapsible Navbar</h3>
   <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
   <p>Only when the button is clicked, the navigation bar will be displayed.</p>
 
-    </section>
+    </article>
     
-    <section id="s2" style="min-height: 500px; background: #00ff90">
+          <article class="panel" >
         
-  <h3>Collapsible Navbar</h3>
+  <h3>Code Blocking</h3>
   <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
   <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+<h4>divisible Navbar</h4>
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+  <h4>Combo Navbar</h4>
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+  <h3>code comparing</h3>
+  <div class="row">
+      <div class="col-md-6">
+          <p><b>C++ code</b></p>
+          <pre>
+              
+              code goes heed;fsdgsa
 
-    </section>
-    
-    <section id="s3" style="min-height: 500px; background: #00ff90">
-        
-  <h3>Collapsible Navbar</h3>
-  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
-  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
-<h3>Collapsible Navbar</h3>
-  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
-  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
-  <h3>Collapsible Navbar</h3>
-  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
-  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
-    </section>
+                <ghlwewe;w> m
+          </pre>
+          
+      </div>
+      <div class="col-md-6">
+          <p><b>Java code</b></p>
+          <pre>
+              
+              code goes heed;fsdgsa
+
+                <ghlwewe;w> m
+          
+          </pre>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-6">
+          <p><b>py code</b></p>
+          <pre> <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+              code goes heed;fsdgsa
+code goes heed;fsdgsa
+code goes heed;fsdgsa
+code goes heed;fsdgsa
+code goes heed;fsdgsa
+code goes heed;fsdgsa
+
+
+                <ghlwewe;w> m
+          </pre>
+          
+      </div>
+      <div class="col-md-6">
+          <p><b>js code</b></p>
+          <pre>
+             
+              code goes heed;fsdgsa
+
+                <ghlwewe;w> m
+          
+          </pre>
+      </div>
+  </div>
+    </article>
       </main>
-      <div class="col-sm-3">
+      <div class="col-sm-2">
       
        
       </div>
@@ -138,11 +200,24 @@
       
   </div>
 </div>
-    <footer class="footer">
-        <p class="text-center">xtrimzz &copy;2016</p>
+   
+    </section>
+     <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>xtrimzz &copy; 2016</p>
+                </div>
+            </div>
+        </div>
+        
     </footer>
-    </div>
+    <!-- End main section -->
+    <script src="js/topiclist.js" type="text/javascript"></script>
     <script src="js/xtrimain.js"></script>
+    <script type="text/javascript"> 
+
+    </script>
 
 </body>
 
